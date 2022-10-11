@@ -1,9 +1,10 @@
-import React from 'react';
-import {StyleSheet, TouchableOpacity, Text} from 'react-native';
-import {colors} from '../../helper/colorConstant';
-import {fontSize, hp, wp} from '../../helper/utilities';
+import React from "react";
+import { StyleSheet, TouchableOpacity, Text } from "react-native";
+import { colors } from "../../helper/colorConstant";
+import { fontSize, hp, wp } from "../../helper/utilities";
 
-const Button = ({onPress, title}) => {
+const Button = ({ onPress, title }) => {
+  console.log("Title :;--", title);
   return (
     <TouchableOpacity style={styles.mainContainer} onPress={onPress}>
       <Text style={styles.textStyle}>{title}</Text>
@@ -17,8 +18,8 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
     shadowOpacity: 0.5,
     borderRadius: wp(3),
-    alignItems: 'center',
-    backgroundColor: 'blue',
+    alignItems: "center",
+    backgroundColor: "blue",
     paddingVertical: hp(1.5),
     shadowColor: colors.black,
     shadowOffset: {
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
     },
   },
   textStyle: {
-    fontWeight: 'bold',
+    fontWeight: "bold",
     color: colors.white,
     fontSize: fontSize(20),
   },
